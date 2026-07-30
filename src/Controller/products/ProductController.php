@@ -17,7 +17,6 @@ class ProductoController
     public function list(): void
     {
         $products = $this->repository->getAll();
-
         // Usuario de ejemplo para simular sesion
         $currentUser = new User(1, 'usuarioEjemplo', 'usuario@ejemplo.com');
         $cart = new Cart($currentUser);
@@ -40,16 +39,17 @@ class ProductoController
         $this->renderizarVista('product/list', $dataView);
     }
 
-    private function renderizarVista(string $vista, array $datos = []): void
+    //funcion para renderizar la pagina
+    private function renderizarVista(string $vist, array $data = []): void
     {
         // extract() convierte las claves del array en variables locales
-        // disponibles dentro del archivo de vista (ej: $productos, $carrito)
-        extract($datos);
-        $rutaVista = __DIR__ . '/../Views/' . $vista . '.php';
+        // disponibles dentro del archivo de vista
+        extract($data);
+        $rutaVista = __DIR__ . '/../Views/' . $vist . '.php';
         if (file_exists($rutaVista)) {
             require $rutaVista;
         } else {
-            echo "Error: la vista '{$vista}' no existe.";
+            echo "Error: la vista '{$vist}' no existe.";
         }
     }
 }
