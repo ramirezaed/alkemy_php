@@ -1,8 +1,9 @@
 
 <?php
-require_once __DIR__ . '/../data/ProductRepository';
-require_once __DIR__ . '/../Models/cart/Carrito.php';
-require_once __DIR__ . '/../Models/users/user';
+require_once __DIR__ . '/../data/ProductRepository.php';
+require_once __DIR__ . '/../Models/cart/Cart.php';
+require_once __DIR__ . '/../Models/user/User.php';
+
 class ProductoController
 {
     private ProductRepository $repository;
@@ -31,25 +32,25 @@ class ProductoController
 
         // datos que la vista preparados por el Controlador
         $dataView = [
-            'productos' => $products,
-            'carrito' => $cart,
-            'usuario' => $currentUser,
+            'products' => $products,
+            'cart' => $cart,
+            'user' => $currentUser,
         ];
 
         $this->renderizarVista('product/list', $dataView);
     }
 
     //funcion para renderizar la pagina
-    private function renderizarVista(string $vist, array $data = []): void
+    private function renderizarVista(string $view, array $data = []): void
     {
         // extract() convierte las claves del array en variables locales
         // disponibles dentro del archivo de vista
         extract($data);
-        $rutaVista = __DIR__ . '/../Views/' . $vist . '.php';
-        if (file_exists($rutaVista)) {
-            require $rutaVista;
+        $routeView = __DIR__ . '/../Views/' . $view . '.php';
+        if (file_exists($routeView)) {
+            require $routeView;
         } else {
-            echo "Error: la vista '{$vist}' no existe.";
+            echo "Error: la vista '{$view}' no existe.";
         }
     }
 }
