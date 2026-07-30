@@ -2,6 +2,7 @@
 
 
 // clase usuario, representa una persona que usa el sistema
+namespace App\Models\user;
 
 class User
 {

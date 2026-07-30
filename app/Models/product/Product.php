@@ -1,9 +1,11 @@
 <?php
 
 
+namespace App\Models\product;
+
 //   Clase Producto
 //   Representa un producto de la tienda.
-require_once "Category.php";
+use App\Models\category\Category;
 
 class Product
 {
@@ -19,6 +21,7 @@ class Product
         $this->name = $name;
         $this->price = $price;
         $this->stock = $stock;
+        $this->category = $category;
     }
 
     //muestra el id del producto

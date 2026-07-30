@@ -1,10 +1,12 @@
-
 <?php
-require_once __DIR__ . '/../data/ProductRepository.php';
-require_once __DIR__ . '/../Models/cart/Cart.php';
-require_once __DIR__ . '/../Models/user/User.php';
 
-class ProductoController
+namespace App\Controller\products;
+// Importamos las clases externas de datos y modelos usando Namespaces
+use App\data\ProductRepository;
+use App\Models\cart\Cart;
+use App\Models\user\User;
+
+class ProductController
 {
     private ProductRepository $repository;
 
@@ -46,7 +48,7 @@ class ProductoController
         // extract() convierte las claves del array en variables locales
         // disponibles dentro del archivo de vista
         extract($data);
-        $routeView = __DIR__ . '/../Views/' . $view . '.php';
+        $routeView = __DIR__ . '/../../Views/' . $view . '.php';
         if (file_exists($routeView)) {
             require $routeView;
         } else {
