@@ -1,8 +1,10 @@
 <?php
 
+
 //   Clase Producto
 //   Representa un producto de la tienda.
 require_once "Category.php";
+
 class Product
 {
     private int $id;
