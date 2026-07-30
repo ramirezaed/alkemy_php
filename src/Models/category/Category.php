@@ -1,5 +1,7 @@
 <?php
 
+//clase categoria, representa la categoria a la que pertenece un producto
+
 class Category
 {
     //prodpiedades de la categoria
