@@ -2,14 +2,14 @@
 
 //   Clase Producto
 //   Representa un producto de la tienda.
-
+require_once "Category.php";
 class Product
 {
     private int $id;
     private string $name;
     private float $price;
     private int $stock;
-    private Category $categoria;
+    private Category $category;
     //constructor metodo/funcion , se ejecuta automaticamente cuando se crea una nueva instancia de la clase
     public function __construct(int $id, string $name, int $stock, float $price, Category $category)
     {
