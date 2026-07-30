@@ -15,3 +15,4 @@ Instalación del entorno de desarrollo
 2. Instalar Composer
    getcomposer.org/Composer-Setup.exe
    navegar al directorio del proyecto e iniciar composer : composer init
+3. Ejecutar  php -S localhost:8000 -t public
