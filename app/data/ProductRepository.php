@@ -1,8 +1,14 @@
 <?php
 
-require_once __DIR__ . '/../Models/product/Product.php';
-require_once __DIR__ . '/../Models/category/Category.php';
+// require_once __DIR__ . '/../Models/product/Product.php';
+// require_once __DIR__ . '/../Models/category/Category.php';
 
+
+namespace App\data;
+
+// Importamos las clases de los productos y categorías desde sus carpetas
+use App\Models\product\Product;
+use App\Models\category\Category;
 
 class ProductRepository
 {

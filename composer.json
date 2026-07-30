@@ -3,7 +3,7 @@
     "description": "Proyecto para aceleracion tech Alkemy PHP",
     "autoload": {
         "psr-4": {
-            "Lenovo\\AlkemyPhp\\": "src/"
+            "App\\": "app/"
         }
     },
     "authors": [

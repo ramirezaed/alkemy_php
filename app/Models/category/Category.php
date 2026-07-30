@@ -1,6 +1,7 @@
 <?php
 
 //clase categoria, representa la categoria a la que pertenece un producto
+namespace App\Models\category;
 
 class Category
 {

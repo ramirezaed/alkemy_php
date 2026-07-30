@@ -1,9 +1,10 @@
 <?php
 
-require_once "User.php";
+namespace App\Models\cart;
 
-require_once __DIR__ . "/user/User.php";
-require_once __DIR__ . "/../product/Product.php";
+// Importamos las clases externas que el carrito necesita utilizar
+use App\Models\user\User;
+use App\Models\product\Product;
 
 class Cart
 {
